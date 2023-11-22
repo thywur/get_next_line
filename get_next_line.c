@@ -6,15 +6,11 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:40:38 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/21 17:42:23 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/22 10:00:48 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 10000000
-#endif
 
 void	*free_and_null(char *s)
 {
@@ -38,7 +34,7 @@ static int	find_endl(char *str)
 	return (-1);
 }
 
-void	push_buffer(char *buffer)
+static void	push_buffer(char *buffer)
 {
 	int	i;
 	int	j;

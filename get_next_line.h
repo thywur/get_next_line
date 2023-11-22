@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:43:20 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/21 17:42:38 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/22 10:03:58 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 # define GET_NEXT_LINE_H
 # include <unistd.h>
 # include <stdlib.h>
-# include <limits.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10000000
+# endif
 
 char	*get_next_line(int fd);
 char	*ft_substr(char *s, unsigned int start, size_t len);
